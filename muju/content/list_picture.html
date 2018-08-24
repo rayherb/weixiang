@@ -1,14 +1,9 @@
-
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1">
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 {template "content","pheader"}
+
     <!--Header:End-->
     <!--Content:Start-->
     <div class="topadcs">
-        <a href="/leddj.html" title="机电外壳模具"><img src="{DIY_PATH}muju/images/Common/category-banner1.jpg" title="机电外壳模具" alt="机电外壳模具" /></a>
+        <a href="{$CATEGORYS[$catid][url]}" title="{$CATEGORYS[$catid][catname]}"><img src="{DIY_PATH}muju/images/common/pbanner.jpg" title=" {$CATEGORYS[$catid][catname]}" alt=" {$CATEGORYS[$catid][catname]}" /></a>
     </div>
     <div class="content">
         <div class="rightl">
@@ -16,10 +11,10 @@
             </div>
             
 <div class="plc">
-    <span>当前位置：</span><a href="{siteurl($siteid)}" title="首页">首页</a> &raquo; {catpos($catid)}
+    <span>当前位置：</span><a href="{siteurl($siteid)}" title="首页">首页</a> &raquo; {catpos($catid)} 列表
 	
 </div>
-            <div class="rightbot">
+         <div class="rightbot">
             </div>
             <div class="righttop">
             </div>
@@ -43,35 +38,33 @@
                 <div class="clear">
                 </div>
                 <!--OranPager:start
-Developed By Oran Day(oransite#gmail.com)
-Version:1.1.0.9
-Aug. 28, 2009
-All rights reserved.-->
-<div id="pagerMain" class="apage">{$pages}</div>
-<!--OranPager:end-->
+				Developed By Oran Day(oransite#gmail.com)
+				Version:1.1.0.9
+				Aug. 28, 2009
+				All rights reserved.-->
+			<div id="pagerMain" class="apage">{$pages}</div>
+					<!--OranPager:end-->
 
-            </div>
-            <div class="rightbot">
+            </div>  
+			<div class="rightbot">
             </div>
             <div class="RandomNews" id="righttuijian">
                 <h4 class="diysr">
                     <i>推荐产品</i></h4>
                 <div class="news_random">
                     {pc:content  action="position" posid="5" order="listorder DESC" num="4"}
-								{loop $data $r}        
+										{loop $data $r}        
                             <dl class="pd_list_dl">
                                 <dt><a href="{$r[url]}" target="_blank"
                                     title="{$r[title]}">
-                                    <img src="{$r[thumb]}" alt="{$r[title]}" title="{$r[title]}" /></a></dt>
+                                    <img src="{$r[thumb]}" alt="{$r[title]}" title="{$r[title]}2" /></a></dt>
                                 <dd>
                                     <a href="{$r[url]}" title="{$r[title]}"
                                         target="_blank">
-                                        {$r[title]}
-									</a>
-								</dd>
+                                        {$r[title]}</a></dd>
                             </dl>
-                        	{/loop}  
-						{/pc}
+										{/loop}  
+					{/pc} 
                     <div class="clear">
                     </div>
                 </div>
@@ -83,6 +76,7 @@ All rights reserved.-->
                     <i>推荐资讯</i></h4>
                 <div class="news_random">
                     <ul>
+                        
                         {pc:content  action="position" posid="5" order="listorder DESC" num="4"}
 							{loop $data $r}        
                                 <li><span class="fr">
@@ -91,6 +85,8 @@ All rights reserved.-->
                                         {$r[title]}</a></li>
                              	{/loop}  
 							{/pc}
+                            
+                            
                         <div class="clear">
                         </div>
                     </ul>
@@ -114,26 +110,25 @@ All rights reserved.-->
     $(".leib2").find("ul").find("li:last").addClass("nobor");
 </script>
 
-            
+          
 <div class="leib mt10" id="lefttuijian">
     <div class="tit">
         推荐产品</div>
-		
     <div class="nr">
-         {pc:content action="hits" catid="$catid" num="10" order="views DESC" cache="3600"}
-			{loop $data $r}
+        {pc:content  action="position" posid="5" order="listorder DESC" num="4"}
+										{loop $data $r}        
                 <dl class="pd_t05_con_dl">
                     <dt><a href="{$r[url]}" target="_blank"
                         title="{$r[title]}">
-                        <img src="{$r[thumb]}" alt="{$r[title]}"
+                        <img src="{$r[url]}" alt="{$r[title]}"
                             title="{$r[title]}" /></a></dt>
                     <dd>
                         <a href="{$r[url]}" title="{$r[title]}"
                             target="_blank">
                             {$r[title]}</a></dd>
-                </dl>
-				{/loop}
-            {/pc}
+                </dl>            
+               	{/loop}  
+             	{/pc} 
             
         <div class="clear">
         </div>
@@ -180,6 +175,13 @@ All rights reserved.-->
     <!--Footer:Start-->
     
 {template "content","footer"}
+<!--[if IE 6]>
+<script src="/Skins/Default/js/DD_belatedPNG.js"></script>
+<![endif]-->
+<!-- 返回顶部 -->
+<script src="/JS/rollup.min.js" type="text/javascript"></script>
+
+
 
 <script type="text/javascript">
     document.body.onselectstart = document.body.oncontextmenu = function () { return false; }

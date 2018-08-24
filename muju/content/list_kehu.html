@@ -1,0 +1,205 @@
+{template "content","pheader"}
+<script type="text/javascript">
+    initCommonHeader();
+    var MARK = "news";
+    if (MARK == "") { MARK = "index"; }
+</script>
+
+    <!--Header:End-->
+    <!--Content:Start-->
+       <div class="topadcs">
+        <a href="{$CATEGORYS[$catid][url]}" title="{$CATEGORYS[$catid][catname]}"><img src="{DIY_PATH}muju/images/common/pbanner.jpg" title=" {$CATEGORYS[$catid][catname]}" alt=" {$CATEGORYS[$catid][catname]}" /></a>
+    </div>
+    <div class="content">
+        
+<div class="left">
+    
+    <div class="leib2">
+        <div class="tit">
+            鸿凯运资讯中心<em>Information</em>
+        </div>
+        <div class="nr">
+        <h4 sid='0001,0025'><a href="http://www.szhky.com.cn/khzx.html" title="客户中心">客户中心</a></h4><ul><li sid='0001,0025,0026'><a href="http://www.szhky.com.cn/khjz.html" title="客户见证">客户见证</a></li><li sid='0001,0025,0027'><a href="http://www.szhky.com.cn/hzkh.html" title="合作客户">合作客户</a></li><li sid='0001,0025,0028'><a href="http://www.szhky.com.cn/dzal.html" title="定制案例">定制案例</a></li></ul><div class='clear'></div><h4 sid='0001,0029'><a href="http://www.szhky.com.cn/xwzx.html" title="新闻资讯">新闻资讯</a></h4><ul><li sid='0001,0029,0030'><a href="http://www.szhky.com.cn/hkydt.html" title="鸿凯运动态">鸿凯运动态</a></li><li sid='0001,0029,0031'><a href="http://www.szhky.com.cn/xydt.html" title="行业动态">行业动态</a></li><li sid='0001,0029,0032'><a href="http://www.szhky.com.cn/cjwtj.html" title="常见问题解答">常见问题解答</a></li></ul><div class='clear'></div><h4 sid='0001,0033'><a href="http://www.szhky.com.cn/clgc.html" title="材料工程">材料工程</a></h4><ul><li sid='0001,0033,0034'><a href="http://www.szhky.com.cn/mjgc.html" title="模具钢材">模具钢材</a></li><li sid='0001,0033,0035'><a href="http://www.szhky.com.cn/sjyl.html" title="塑胶原料">塑胶原料</a></li></ul><div class='clear'></div>
+        </div>
+    </div>
+     <script type="text/javascript">
+         // $(".nr:gt(0)").addClass("mt10");
+         $(".leib2").find("ul").find("li:last").addClass("nobor");
+    </script>
+    
+    
+<div class="leib mt10" id="lefttuijian">
+    <div class="tit">
+        推荐产品</div>
+    <div class="nr">
+        {pc:content action="lists" catid="$catid" num="10" order="id DESC" page="$page"}
+					{loop $data $r}
+                <dl class="pd_t05_con_dl">
+                    <dt><a href="{$r[url]}" target="_blank"
+                        title="{$r[title]}">
+                        <img src="{$r[thumb]}" alt="{$r[title]}"
+                            title="{$r[title]}" /></a></dt>
+                    <dd>
+                        <a href="{$r[url]}" title="{$r[title]}"
+                            target="_blank">
+                            {$r[title]}</a>
+					</dd>
+                </dl>
+            {/loop}
+            {/pc}
+        <div class="clear">
+        </div>
+    </div>
+</div>
+
+    <div class="leib2 mt10">
+                <div class="tit">
+                    联系鸿凯运<em>Contact us</em></div>
+                <div class="leftlx">
+                    <div class="dianh">
+                        <div class="dianhua">
+ <img title="联系鸿凯运" alt="联系鸿凯运" src="{DIY_PATH}muju/images/common/CatactUs.jpg">
+                            全国服务热线：<span>4009600308</span>
+                        </div>
+                        <p>
+                          电话：0755-23573722</p>
+                         <p>
+                            传真：0755-23573766 </p>
+                                           <p>
+                           QQ：2853282161               </p>
+                        <p>
+                           Email：hjg@szhky.cn </p>
+  <p>
+                          深圳市光明新区马田街道薯田埔新兴工业园B区第50栋102 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="leftbot"></div>
+</div>
+
+        <script type="text/javascript">
+            var SID = "0001,0025,0026";
+            newsSelectCurrentPosition();
+        </script>
+        <div class="right">
+            
+            <div class="righttop">
+            </div>
+            
+<div class="plc">
+    <span>当前位置：</span><a href="{siteurl($siteid)}" title="首页">首页</a> &raquo; {catpos($catid)}
+	
+</div>
+            <div class="rightbot">
+            </div>
+            <div class="righttop">
+            </div>
+            <div class="right_main">
+                <div class="news_con">
+                    {pc:content action="lists" catid="$catid" num="10" order="id DESC" page="$page"}
+					{loop $data $r}
+                           <dl class="dl_jz">
+                                <dt><a href="{$r[url]}" target="_blank">
+                                    <img src="$r[thumb]" alt="{$r[title]}"
+                                        title="{$r[title]}" /></a></dt>
+                                <dd>
+                                    <h4>
+                                        <a href="{$r[url]}" target="_blank"
+                                            title="{$r[title]}">
+                                            {$r[title]}</a></h4>
+                                    <p>
+                                        {$r[description]}</p>
+                                    <span><a href="{$r[url]}" target="_blank"
+                                        title="{$r[title]}">查看详情>></a></span></dd>
+                            </dl>
+							{/loop}                         {/pc}                                                                                                                                                     
+                    
+                    <div class="clear">
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="rightbot">
+            </div>
+            <div class="RandomNews" id="righttuijian">
+                <h4 class="diysr">
+                    <i>推荐产品</i></h4>
+                <div class="news_random">
+                        	{pc:content action="lists" catid="$catid" num="3"  }
+								{loop $data $r}
+                            <dl class="pd_list_dls">
+                                <dt><a href="{$r[url]}" target="_blank"
+                                    title="{$r[title]}">
+                                    <img src="{$r[thumb]}" alt="{$r[title]}" title="{$r[title]}" /></a></dt>
+                                <dd>
+                                    <a href="{$r[url]}" title="{$r[title]}"
+                                        target="_blank">
+                                       {$r[title]}</a></dd>
+                            </dl>
+							{/loop}
+							{/pc}
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+            <div class="rightbot">
+            </div>
+        </div>
+        <script type="text/javascript">
+            if ($("div.right").height() > 1400) {
+                $("#righttuijian").hide().next("div.rightbot").hide();
+            } else {
+                $("#lefttuijian").hide();
+            }
+            //显示方式
+            var showtype = "5";
+            //当前栏目的ID
+            var columnid = "26";
+            switch (showtype) {
+                case "3":
+                    if (columnid == 0) {
+                        $("#newslistbox dl").attr("class", "").addClass("dl_hon");
+                    } else if (columnid == 0) {
+                        $("#newslistbox dl").attr("class", "").addClass("dl_pho");
+                    } else {
+                        reDrawImage(0);
+                    }
+                    break;
+                default:
+                    if (columnid == 40) {
+                        $("#newslistbox dl").attr("class", "").addClass("dl_pho");
+                    } else {
+                        reDrawImage(1);
+                    }
+                    break;
+            }
+            function reDrawImage(isdetails) {
+                if (isdetails) {
+                    $("#newslistbox dl img").each(function () {
+                        $(this).get(0).onload = function () { DrawImage(this, 200, 120, 1); }
+                    });
+                } else {
+                    $("#newslistbox dl img").each(function () {
+                        $(this).get(0).onload = function () { DrawImage(this, 200, 144, 1); }
+                    });
+                }
+            }
+        </script>
+        <div class="clear">
+        </div>
+    </div>
+    <!--Content:End-->
+    <!--Footer:Start-->
+    
+{template "content","footer"}
+<!--[if IE 6]>
+<script src="/Skins/Default/js/DD_belatedPNG.js"></script>
+<![endif]-->
+<!-- 返回顶部 -->
+
+    <!--Footer:End-->
+</body>
+</html>
+<script type="text/javascript">
+    $(".news_con").find("dl").hover(function () { $(this).addClass("news_dl_hover"); }, function () { $(this).removeClass("news_dl_hover"); })
+</script>
