@@ -1,0 +1,203 @@
+{template "content","header"}
+
+    <!--Header:End-->
+    <!--Content:Start-->
+    <div class="topadcs">
+        <a href="/leddj.html" title="机电外壳模具"><img src="{DIY_PATH}muju/images/Common/category-banner1.jpg" title="机电外壳模具" alt="机电外壳模具" /></a>
+    </div>
+    <div class="content">
+        <div class="rightl">
+            <div class="righttop">
+            </div>
+            
+<div class="plc">
+    <span>当前位置：</span><a href="{siteurl($siteid)}" title="首页">首页</a> &raquo; {catpos($catid)}
+	
+</div>
+            <div class="rightbot">
+            </div>
+            <div class="righttop">
+            </div>
+            <div class="pro_main">
+                <div class="prodesc"></div>
+                 {pc:content action="lists" catid="$catid" num="8"  thumb="1" order="id DESC" page="$page"}
+						{loop $data $r}
+                        <dl class="pd_list_dl">
+                            <dt><a target="_blank" href="{$r[url]}"
+                                title="{$r[title]}">
+                                <img src="{$r[thumb]}" alt="{$r[title]}"
+                                    title="{$r[title]}" /></a></dt>
+                            <dd>
+                                <a target="_blank" href="{$r[url]}"
+                                    title="{$r[title]}">
+                                    {$r[title]}</a></dd>
+                        </dl>
+                            {/loop}	
+					{/pc}  
+                
+                <div class="clear">
+                </div>
+                <!--OranPager:start
+Developed By Oran Day(oransite#gmail.com)
+Version:1.1.0.9
+Aug. 28, 2009
+All rights reserved.-->
+<div id="pagerMain" class="apage">{$pages}</div>
+<!--OranPager:end-->
+
+            </div>
+            <div class="rightbot">
+            </div>
+            <div class="RandomNews" id="righttuijian">
+                <h4 class="diysr">
+                    <i>推荐产品</i></h4>
+                <div class="news_random">
+                    {pc:content  action="position" posid="5" order="listorder DESC" num="4"}
+								{loop $data $r}        
+                            <dl class="pd_list_dl">
+                                <dt><a href="{$r[url]}" target="_blank"
+                                    title="{$r[title]}">
+                                    <img src="{$r[thumb]}" alt="{$r[title]}" title="{$r[title]}" /></a></dt>
+                                <dd>
+                                    <a href="{$r[url]}" title="{$r[title]}"
+                                        target="_blank">
+                                        {$r[title]}
+									</a>
+								</dd>
+                            </dl>
+                        	{/loop}  
+						{/pc}
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+            <div class="rightbot">
+            </div>
+            <div class="RandomNews">
+                <h4 class="diysr">
+                    <i>推荐资讯</i></h4>
+                <div class="news_random">
+                    <ul>
+                        {pc:content  action="position" posid="5" order="listorder DESC" num="4"}
+							{loop $data $r}        
+                                <li><span class="fr">
+                                    date('Y-m-d',$r[inputtime])}</span><a target="_blank"
+                                        href="{$r[url]}" title="{$r[title]}">
+                                        {$r[title]}</a></li>
+                             	{/loop}  
+							{/pc}
+                        <div class="clear">
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="rightbot">
+            </div>
+        </div>
+        <div class="leftr">
+            
+<div class="leib2">
+    <div class="tit">
+        鸿凯运产品中心<em>Products</em></div>
+    <div class="nr">
+        <h4 sid='0001,0016'><a href="http://www.szhky.com.cn/atxfl.html" title="按特性分类">按特性分类</a></h4><ul><li sid='0001,0016,0018'><a href="http://www.szhky.com.cn/gcslm.html" title="工程塑料模具">工程塑料模具</a></li><li sid='0001,0016,0020'><a href="http://www.szhky.com.cn/ssbjm.html" title="双色包胶模具">双色包胶模具</a></li><li sid='0001,0016,0017'><a href="http://www.szhky.com.cn/tyslmj.html" title="通用塑料模具">通用塑料模具</a></li></ul><div class='clear'></div><h4 sid='0001,0005'><a href="http://www.szhky.com.cn/acpfl.html" title="按产品分类">按产品分类</a></h4><ul><li sid='0001,0005,0004'><a href="http://www.szhky.com.cn/jdwkm.html" title="机电外壳模具">机电外壳模具</a></li><li sid='0001,0005,0006'><a href="http://www.szhky.com.cn/leddj.html" title="LED灯具模具">LED灯具模具</a></li><li sid='0001,0005,0007'><a href="http://www.szhky.com.cn/ylqxm.html" title="医疗器械模具">医疗器械模具</a></li><li sid='0001,0005,0008'><a href="http://www.szhky.com.cn/znjjm.html" title="智能家居模具">智能家居模具</a></li><li sid='0001,0005,0009'><a href="http://www.szhky.com.cn/qcpjm.html" title="汽车配件模具">汽车配件模具</a></li><li sid='0001,0005,0010'><a href="http://www.szhky.com.cn/smdzc.html" title="数码电子产品模具">数码电子产品模具</a></li></ul><div class='clear'></div><h4 sid='0001,0011'><a href="http://www.szhky.com.cn/asyyt.html" title="按使用用途分类">按使用用途分类</a></h4><ul><li sid='0001,0011,0012'><a href="http://www.szhky.com.cn/jmmj.html" title="精密模具">精密模具</a></li><li sid='0001,0011,0013'><a href="http://www.szhky.com.cn/dxmj.html" title="大型模具">大型模具</a></li><li sid='0001,0011,0014'><a href="http://www.szhky.com.cn/scmj.html" title="生产模具">生产模具</a></li><li sid='0001,0011,0015'><a href="http://www.szhky.com.cn/ksmj.html" title="快速模具">快速模具</a></li></ul><div class='clear'></div><h4 sid='0001,0021'><a href="http://www.szhky.com.cn/sjmjz.html" title="塑胶模具展示">塑胶模具展示</a></h4>
+        <div class="clear"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    productSelectCurrentPosition("0001,0021");
+    $(".leib2").find("ul").find("li:last").addClass("nobor");
+</script>
+
+            
+<div class="leib mt10" id="lefttuijian">
+    <div class="tit">
+        推荐产品</div>
+    <div class="nr">
+        
+                <dl class="pd_t05_con_dl">
+                    <dt><a href="http://www.szhky.com.cn/dxmj/jdwkcpsjmj.html" target="_blank"
+                        title="家电外壳产品塑胶模具">
+                        <img src="http://www.szhky.com.cn/UploadFiles/Product/20151125160521_87042.jpg" alt="家电外壳产品塑胶模具"
+                            title="家电外壳产品塑胶模具" /></a></dt>
+                    <dd>
+                        <a href="http://www.szhky.com.cn/dxmj/jdwkcpsjmj.html" title="家电外壳产品塑胶模具"
+                            target="_blank">
+                            家电外壳产品塑胶模具</a></dd>
+                </dl>
+            
+                <dl class="pd_t05_con_dl">
+                    <dt><a href="http://www.szhky.com.cn/leddj/a60qpdwk.html" target="_blank"
+                        title="A60球泡灯外壳">
+                        <img src="http://www.szhky.com.cn/UploadFiles/Product/20150916120101_64515.jpg" alt="A60球泡灯外壳"
+                            title="A60球泡灯外壳" /></a></dt>
+                    <dd>
+                        <a href="http://www.szhky.com.cn/leddj/a60qpdwk.html" title="A60球泡灯外壳"
+                            target="_blank">
+                            A60球泡灯外壳</a></dd>
+                </dl>
+            
+                <dl class="pd_t05_con_dl">
+                    <dt><a href="http://www.szhky.com.cn/znjjm/xxjmjzsjgc.html" target="_blank"
+                        title="香薰机模具注塑加工厂家">
+                        <img src="http://www.szhky.com.cn/UploadFiles/Product/20150627200504_58237.jpg" alt="香薰机模具注塑加工厂家"
+                            title="香薰机模具注塑加工厂家" /></a></dt>
+                    <dd>
+                        <a href="http://www.szhky.com.cn/znjjm/xxjmjzsjgc.html" title="香薰机模具注塑加工厂家"
+                            target="_blank">
+                            香薰机模具注塑加工厂家</a></dd>
+                </dl>
+            
+        <div class="clear">
+        </div>
+    </div>
+</div>
+
+            <div class="leib2 mt10">
+                <div class="tit">
+                    联系鸿凯运<em>Contact us</em></div>
+                <div class="leftlx">
+                    <div class="dianh">
+                        <div class="dianhua">
+ <img title="联系鸿凯运" alt="联系鸿凯运" src="/Skins/Default/Img/CatactUs.jpg">
+                            全国服务热线：<span>4009600308</span>
+                        </div>
+                        <p>
+                          电话：0755-23573722</p>
+                         <p>
+                            传真：0755-23573766 </p>
+                                           <p>
+                           QQ：2853282161               </p>
+                        <p>
+                           Email：hjg@szhky.cn </p>
+  <p>
+                          深圳市光明新区马田街道薯田埔新兴工业园B区第50栋102 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="leftbot"></div>
+        </div>
+        <script type="text/javascript">
+            if ($("div.rightl").height() > 1400) {
+                $("#righttuijian").hide().next("div.rightbot").hide();
+            } else {
+                $("#lefttuijian").hide();
+            }
+        </script>
+        <div class="clear">
+        </div>
+        <div id="mailArticle">
+        </div>
+    </div>
+    <!--Content:End-->
+    <!--Footer:Start-->
+    
+{template "content","footer"}
+
+<script type="text/javascript">
+    document.body.onselectstart = document.body.oncontextmenu = function () { return false; }
+</script> 
+    <!--Footer:End-->
+</body>
+</html>
+

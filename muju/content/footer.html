@@ -1,0 +1,29 @@
+<div class="f_wrap">
+    <div class="f_nav fixed">
+        <a href="http://www.szhky.com.cn/" title="威祥五金首页" >威祥五金首页</a>
+		{pc:content action="category" catid="1" num="15" siteid="$siteid" order="listorder ASC"}
+		{loop $data $r}
+			<a href="{$r[url]}" title="{$r[catname]}" >{$r[catname]}</a>
+		{/loop}
+{/pc}
+    </div>
+    <div class="f_cp fixed">
+        <h2 class="f_logo">
+            <a href="http://www.szhky.com.cn" title="威祥五金">
+                <img src="{DIY_PATH}muju/images/index/f_logo.png" alt="深圳市威祥五金科技有限公司" title="深圳市威祥五金科技有限公司" /></a></h2>
+        <ul>
+            <li>深圳市威祥五金科技有限公司<span>版权所有</span><span><a href="http://www.miitbeian.gov.cn/" title="备案号：ICP备18097179号" target="_blank">备案号：ICP备18097179号</a></span></li>
+            <li>联系方式：0755-23573722 / 23573733<span>传真：0755-23573766</span></li>
+            <li>QQ: 2853282161<span>Email:
+                hjg@szhky.cn</span></li>
+            <li>公司地址：深圳市光明新区马田街道薯田埔新兴工业园B区第50栋102</li>
+            <li>深圳塑胶模具厂,深圳塑料模具加工制造,深圳市模具厂,注塑加工厂家</li>
+           <li>
+				<span></span>
+		   </li>
+        </ul>
+        <p>
+            <img src="{DIY_PATH}muju/images/index/code.jpg" alt="扫一扫！" title="扫一扫" /></p>
+    </div>
+</div>
+<script src="{DIY_PATH}muju//js/rollup.min.js" type="text/javascript"></script>
