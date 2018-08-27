@@ -1,25 +1,434 @@
-{template "wap","header"}
-<h2><a href="#" class="cat">焦点推荐</a>&nbsp;<span style="color:#999; font-size:12px; font-weight:100;">{date('Y-m-d',SYS_TIME)}</span></h2>
-<div>
-{pc:wap  action="position" posid="12" order="listorder DESC" num="6"}
- {loop $data $r}
-	<a href="{$r[url]}">{str_cut($r['title'],26,'')}</a><br/>
-   {/loop}  
- {/pc} 
-</div>
-<div class="ad1"><a href="#"><img src="{IMG_PATH}wap/ad220x26.gif" alt="phpcms手机网建站利器" width="220" height="26" /></a></div>
-{loop subtype(0) $s}
-	{php $typeid=$s[typeid]}
-	{pc:wap action="lists" typeid="$typeid" num="10" order="id DESC" return="info"}
-		<h2><a href="{list_url($typeid)}" class="cat">{$s['typename']}</a>
-		 {loop subtype($typeid) $_s}<a href="{list_url($_s[typeid])}">{$_s[typename]}</a>{/loop}
-		</h2>
-		<div>
-		{loop $info $i}
-			<a href="{show_url($i[catid],$i[id])}">{str_cut($i['title'],26,'')}</a><br/>
-		{/loop}
-		</div>
-	{/pc}
-{/loop}
+<!DOCTYPE HTML>
+<html>
+<head id="Head1"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" /><meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	深圳塑胶模具,塑胶模具厂,塑料模具制造,注塑模具,注塑加工厂-深圳市鸿凯运科技有限公司
+</title><meta name="keywords" content="深圳塑胶模具,塑胶模具厂,塑料模具制造,注塑模具,注塑加工厂" /><meta name="description" content="深圳鸿凯运专业塑胶模具厂、注塑加工厂，致力于提供专业的塑胶模具、注塑模具、塑料模具、精密塑胶模具制造等。最快五天出模，量大免费开模；全球知名品牌GE合格供应商。公司产品涉及家用电器、LED照明、通讯设备、汽车配件、医疗器械、航空航天等行业领域。全国免费服务热线:400-9600-308" />
+<link href="{DIY_PATH}mobile/style/common.css" rel="stylesheet" type="text/css" />
+<link href="{DIY_PATH}mobile/style/index.css" rel="stylesheet" type="text/css" />
+<link rel="apple-touch-icon-precomposed" href="/Mobile/images/common/touch-icon.png" />
+<script type="text/javascript">SKIN_PATH="/Skins/default/";</script></head>
+<body>
+    <div class="wrap">
+        <!--头部 开始-->
+        
+<header class="g-hd">
+    	<a href="tel:4009600308"><p><span>全国服务热线：</span>4009600308</p></a>
+        <a href="/mobile/" name="logo"><i class="m-logo f-fl"><img src="{DIY_PATH}mobile/images/common/h_logo.jpg" data-src="{DIY_PATH}mobile/images/common/h_logo.jpg" alt="鸿凯运"/></i></a>
+        <div class="h_con">
+            <h1 class="f-fr m-wz">5天快速出模，模具定制优选品牌<i>美国GE合作伙伴</i></h1>
+        </div>
+	</header>
 
-{template "wap","footer"}
+        <!--头部 结束-->
+        <section class="g-bd">
+            <!--banner-->
+            
+<div class="g-adv j-slide-auto">
+    <ul class="m-box">
+        
+                <li><a href="/mobile/mproduct/index.aspx" title="专注各类塑胶模具设计，制作及注塑成型加工">
+                    <img src="/Mobile/Images/web/grey.gif" data-src="{DIY_PATH}mobile/images/common/banner1.jpg" alt="专注各类塑胶模具设计，制作及注塑成型加工"
+                        title="专注各类塑胶模具设计，制作及注塑成型加工" /></a></li>
+            
+                <li><a href="/mobile/mproduct/index.aspx" title="资深专家制作团队和先进的生产设备,实现您不同定制需求">
+                    <img src="/Mobile/Images/web/grey.gif" data-src="{DIY_PATH}mobile/images/common/banner2.jpg" alt="资深专家制作团队和先进的生产设备,实现您不同定制需求"
+                        title="资深专家制作团队和先进的生产设备,实现您不同定制需求" /></a></li>
+            
+                <li><a href="/mobile/mproduct/index.aspx" title="精密制造，严格检测，+0.02mm高精度，无可挑剔">
+                    <img src="/Mobile/Images/web/grey.gif" data-src="{DIY_PATH}mobile/images/common/banner3.jpg" alt="精密制造，严格检测，+0.02mm高精度，无可挑剔"
+                        title="精密制造，严格检测，+0.02mm高精度，无可挑剔" /></a></li>
+            
+    </ul>
+    <ul class="m-cnt">
+        
+                <li></li>
+            
+                <li></li>
+            
+                <li></li>
+            
+    </ul>
+</div>
+
+        
+         <!--请输入搜索关键词-->  
+        <div class="m-sou">
+            <div class="m-ipt">
+                <input type="text" class="u-key clear_word" id="se_key" value="请输入您要搜索的关键词"/>
+            </div> 
+            <span class="u-bt"></span>
+            <input type="button" class="u-in" value=" "/>
+            <div class="clear"></div>
+        </div>
+        
+        <nav>
+        <a class="nav_n1" href="/tyslmj.html" title="通用塑胶模具">通用塑胶<br/>模具</a>
+        <a class="nav_n1" href="/gcslm.html" title="工程塑胶模具">工程塑胶<br/>模具</a>
+        <a class="nav_n1" href="/sjmjz.html" title="模具注塑加工">模具注塑<br />加工</a>
+        <a href="/dzal.html" title="定制案例">定制案例</a>
+        <a href="/scsb.html" title="生产设备">生产设备</a>
+        <a class="nones nav_n1" href="/Mobile/Mhelps/aboutus.html" title="关于鸿凯运">关于<br/>鸿凯运</a>
+        </nav>
+        
+        
+       <!--鸿凯运产品中心-->
+        <div class="g-test j-slide-not m-pro">
+            <h2>鸿凯运产品中心</h2>
+            <ul class="m-cnt">
+                <li class="z-on">按产品分类</li>
+                <li>按用途分类</li>
+                <li>按特性分类</li>
+            </ul>
+            <div class="m-box">
+                
+<div class="con">
+    <ul>
+        
+                <li><a href="/Mobile/MProducts/jkslmjzz_page1.html" title='机壳塑料模具制造'>
+                    <img src="/Mobile/UploadFiles/Product/20151119081405_34122.jpg_130X95.jpg"
+                        alt="机壳塑料模具制造"><span>机壳塑料模具制造</span></a></li>
+            
+                <li><a href="/Mobile/MProducts/wkqsjmj_page1.html" title='温控器塑胶模具'>
+                    <img src="/Mobile/UploadFiles/Product/20171012115126_85449.jpg_130X95.jpg"
+                        alt="温控器塑胶模具"><span>温控器塑胶模具</span></a></li>
+            
+                <li><a href="/Mobile/MProducts/bcxzgywksj_page1.html" title='奔驰旋转高音外壳塑胶模具'>
+                    <img src="/Mobile/UploadFiles/Product/20171012111838_47732.jpg_130X95.jpg"
+                        alt="奔驰旋转高音外壳塑胶模具"><span>奔驰旋转高音外壳塑胶模具</span></a></li>
+            
+                <li><a href="/Mobile/MProducts/xnqfltjmsj_page1.html" title='吸奶器法兰体-精密塑胶模具'>
+                    <img src="/Mobile/UploadFiles/Product/20160909092916_38609.jpg_130X95.jpg"
+                        alt="吸奶器法兰体-精密塑胶模具"><span>吸奶器法兰体-精密塑胶模具</span></a></li>
+            
+    </ul>
+    <a href="/acpfl.html" title="点击查看更多产品">
+        <p>
+            点击查看更多产品 >></p>
+    </a>
+</div>
+
+
+                
+<div class="con">
+    <ul>
+        
+    </ul>
+    <a href="/asyyt.html" title="点击查看更多产品">
+        <p>
+            点击查看更多产品 >></p>
+    </a>
+</div>
+
+
+                
+<div class="con">
+    <ul>
+        
+                <li><a href="/Mobile/MProducts/bjsjmj_page1.html" title='包胶塑胶模具'>
+                    <img src="/Mobile/UploadFiles/Product/20160709172600_24711.jpg_130X95.jpg"
+                        alt="包胶塑胶模具"><span>包胶塑胶模具</span></a></li>
+            
+                <li><a href="/Mobile/MProducts/nljxjymj_page1.html" title='尼龙加纤绞牙模具'>
+                    <img src="/Mobile/UploadFiles/Product/20151120202316_43529.jpg_130X95.jpg"
+                        alt="尼龙加纤绞牙模具"><span>尼龙加纤绞牙模具</span></a></li>
+            
+                <li><a href="/Mobile/MProducts/ydsbbjmjsj_page1.html" title='运动手表包胶模具塑胶制品'>
+                    <img src="/Mobile/UploadFiles/Product/20151118211631_70826.jpg_130X95.jpg"
+                        alt="运动手表包胶模具塑胶制品"><span>运动手表包胶模具塑胶制品</span></a></li>
+            
+    </ul>
+    <a href="/atxfl.html" title="点击查看更多产品">
+        <p>
+            点击查看更多产品 >></p>
+    </a>
+</div>
+
+            </div>
+        </div>
+       
+       <div class="clear"></div>
+         
+        <!--m-tel--> 
+       <div class="m-tels">
+       		<a href="tel:4009600308"><p><span>全国服务热线：</span>4009600308</p></a>
+       </div>  
+        
+        <!--感谢以下客户长期以来对鸿凯运的支持-->
+        
+<div class="g-test j-slide-np m-part">
+    <a href="/hzkh.html" title="感谢以下客户长期以来对鸿凯运的支持 ">
+        <h2>
+            感谢以下客户长期以来对鸿凯运的支持<i>Thanks to the following customers long-term support for Hongkai Win</i></h2>
+    </a>
+    <div class="prev">
+        <img src="/Mobile/Images/web/grey.gif" data-src="/Mobile/Images/Index/part_roll1.jpg"
+            alt="prev" /></div>
+    <div class="nowarp">
+        <div class="m-box">
+            <div class="con">
+                <ul>
+                    
+                            <li ><a href="/Mobile/MArticles/hkyhzkhmgg_1_page1.html"
+                                title="鸿凯运合作客户-美国GE">
+                                <img src="/Mobile/UploadFiles/News/20141127115030_66878.jpg_130X108.jpg"
+                                    alt="鸿凯运合作客户-美国GE" title="鸿凯运合作客户-美国GE" /><span>
+                                        鸿凯运合作客户
+                                    </span></a></li>
+                            
+                        
+                            <li class='nones'><a href="/Mobile/MArticles/hkyhzkhwcl_1_page1.html"
+                                title="鸿凯运合作客户-伟创力">
+                                <img src="/Mobile/UploadFiles/News/20141127114945_48295.jpg_130X108.jpg"
+                                    alt="鸿凯运合作客户-伟创力" title="鸿凯运合作客户-伟创力" /><span>
+                                        鸿凯运合作客户
+                                    </span></a></li>
+                            </ul></div><div class='con'><ul class='clearfix'>
+                        
+                            <li ><a href="/Mobile/MArticles/news-63061504191_page1.html"
+                                title="鸿凯运合作客户-湖南长城信息金融">
+                                <img src="/Mobile/UploadFiles/News/20180307150405_37698.png_130X108.jpg"
+                                    alt="鸿凯运合作客户-湖南长城信息金融" title="鸿凯运合作客户-湖南长城信息金融" /><span>
+                                        鸿凯运合作客户
+                                    </span></a></li>
+                            
+                        
+                            <li class='nones'><a href="/Mobile/MArticles/hkyhzkhwhg_page1.html"
+                                title="鸿凯运合作客户-威海广泰">
+                                <img src="/Mobile/UploadFiles/News/20180307145713_34432.jpg_130X108.jpg"
+                                    alt="鸿凯运合作客户-威海广泰" title="鸿凯运合作客户-威海广泰" /><span>
+                                        鸿凯运合作客户
+                                    </span></a></li>
+                            </ul></div><div class='con'><ul class='clearfix'>
+                        
+                            <li ><a href="/Mobile/MArticles/hkyhzkhdef_1_page1.html"
+                                title="鸿凯运合作客户-德尔福">
+                                <img src="/Mobile/UploadFiles/News/20161020164302_84545.png_130X108.jpg"
+                                    alt="鸿凯运合作客户-德尔福" title="鸿凯运合作客户-德尔福" /><span>
+                                        鸿凯运合作客户
+                                    </span></a></li>
+                            
+                        
+                            <li class='nones'><a href="/Mobile/MArticles/hkyhzkhls_1_page1.html"
+                                title="鸿凯运合作客户-雷松">
+                                <img src="/Mobile/UploadFiles/News/20141127115116_46047.jpg_130X108.jpg"
+                                    alt="鸿凯运合作客户-雷松" title="鸿凯运合作客户-雷松" /><span>
+                                        鸿凯运合作客户
+                                    </span></a></li>
+                            
+                        
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="next">
+        <img src="/Mobile/Images/web/grey.gif" data-src="/Mobile/Images/Index/part_roll2.jpg"
+            alt="next" /></div>
+</div>
+
+        
+     	<!--ys-->
+     	<div class="j-slide-not m-ys">
+        	<h2>鸿凯运塑胶模</h2>
+            <div class="m-box m-ys-con">
+                <div class="con">
+                	<dl class="ys_dl01">
+                        <dt><em>速度</em><p>制造实力强,5天快速出模</p></dt>
+                        <dd>
+                            <p>拥有厂房面积<i>8000</i>平米</p>
+                            <p>模具设备：CNC加工中心<i>6台、4台</i>火花机，<i>6台</i>铣床，<i>3台</i>磨床，知名品牌线割机<i>4台</i>，摇臂钻床和攻牙机各<i>1台</i>，完全<i>实现CAD/CAM加工一体化</i>；</p>
+                            <p>注塑设备：<i>60吨位至420吨位注塑机20余台</i></p>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="con">
+                	<dl class="ys_dl02">
+                        <dt><em>品质</em><p>高精度品质，± 0.02mm，<br/>优质模具使用体验，50万次不变形</p></dt>
+                        <dd>
+                            <p><i>日本三丰三坐标测量仪器和投影三次元</i>，对模具尺寸和产品尺寸进行高精度检测</p>
+                            <p>产品精度<i>± 0.02mm </i>，模具使用寿命<i>50万</i>次不变形</p>
+                            <p>模架：固定选用<i>龙记模架</i>，确保模具精度、生产寿命及产品原始数据保存</p>
+                            <p>注塑用料：<i>十年以上进口原料代理商供货</i>，严格把控产品从尺寸缩水到外观色差、披锋等一切误差，同时确<i>保环保要求</i>。</p>
+                        </dd>
+                    </dl>
+                </div>
+                
+                <div class="con">
+                	<dl class="ys_dl03">
+                        <dt><em>效率</em><p>经验丰富，为您有效控制时间<br/>及节约资金成本</b></dt>
+                        <dd>
+                            <p><i>量大免费开模</i></p>
+                            <p><i>评估</i>客户图纸合理性，<i>给出</i>优化产品结构改善建议，有效控制时间及资金成本</p>
+                            <p><i>20年以上</i>经验技术工程师及模具师团队，满足您不同定制需求</p>
+                            <p><i>应急生产预案</i>灵活解决客户急需，保证交货期</p>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="con">
+                	<dl class="ys_dl04">
+                        <dt><em>服务</em><p>高效能服务</p></dt>
+                        <dd>
+                            <p>全天候<i>24小时服务</i>，打造客户超预期满意度</p>
+                            <p>严格按照<i>美国GE</i>的服务标准服务客户</p>
+                            <p>提供模具寿命内一切技术支持，所有问题一步到位</p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <ul class="m-cnt">
+                <li class="z-on">01</li>
+                <li>02</li>
+                <li>03</li>
+                <li>04</li>
+            </ul>
+        </div>
+        
+        <!--新闻资讯-->
+        <div class="j-slide-not m-news">
+            <ul class="m-cnt">
+                <li class="z-on">鸿凯运动态</li>
+                <li>行业动态</li>
+            </ul>
+            <div class="clear"></div>
+            <div class="m-box new_c">
+                
+<div class="con">
+    
+            <dl>
+                <dt><a href="/Mobile/MArticles/xqdsdxlthk_1_page1.html" title="新起点上的新蓝图-鸿凯运搬迁公明">
+                    <img src="/Mobile/UploadFiles/News/20171011161611_36730.JPG_130X82.jpg"
+                        alt="新起点上的新蓝图-鸿凯运搬迁公明" title="新起点上的新蓝图-鸿凯运搬迁公明" /></a></dt>
+            </dl>
+        
+    <ul>
+        
+                <a href="/Mobile/MArticles/slmjkmjsgw_1_page1.html" title="塑料模具开模技术顾问咨询">
+                    <li>
+                        塑料模具开模技术顾问咨询
+                    </li>
+                </a>
+            
+                <a href="/Mobile/MArticles/wyzsmjgcc4_1_page1.html" title="我与注塑模具共成长4年">
+                    <li>
+                        我与注塑模具共成长4年
+                    </li>
+                </a>
+            
+                <a href="/Mobile/MArticles/kgdjhkysjm_page1.html" title="开工大吉，鸿凯运塑胶模具厂今日恢复正常营业">
+                    <li>
+                        开工大吉，鸿凯运塑胶模具厂今日恢复正常...
+                    </li>
+                </a>
+            
+                <a href="/Mobile/MArticles/hkysjmjcqt_page1.html" title="鸿凯运塑胶模具厂全体员工参加IATF16949培训">
+                    <li>
+                        鸿凯运塑胶模具厂全体员工参加IATF16949培...
+                    </li>
+                </a>
+            
+                <a href="/Mobile/MArticles/hky2018nyd_1_page1.html" title="鸿凯运2018年元旦放假安排 恭祝大家节日快乐">
+                    <li>
+                        鸿凯运2018年元旦放假安排 恭祝大家节日快...
+                    </li>
+                </a>
+            
+                <a href="/Mobile/MArticles/xqdsdxlthk_1_page1.html" title="新起点上的新蓝图-鸿凯运搬迁公明">
+                    <li>
+                        新起点上的新蓝图-鸿凯运搬迁公明
+                    </li>
+                </a>
+            
+    </ul>
+</div>
+
+                
+                
+<div class="con">
+    
+            <dl>
+                <dt><a href="/Mobile/MArticles/dxslmjzzyb_1_page1.html" title="当下塑料模具制造业变革当从经营理念开始">
+                    <img src="/Mobile/UploadFiles/News/20151009202926_16839.jpg_130X82.jpg"
+                        alt="当下塑料模具制造业变革当从经营理念开始" title="当下塑料模具制造业变革当从经营理念开始" /></a></dt>
+            </dl>
+        
+    <ul>
+        
+                <a href="/Mobile/MArticles/dxslmjzzyb_1_page1.html" title="当下塑料模具制造业变革当从经营理念开始">
+                    <li>
+                        当下塑料模具制造业变革当从经营理...
+                    </li>
+                </a>
+            
+                <a href="/Mobile/MArticles/zsmjcnlesj_1_page1.html" title="注塑模具厂逆流而上，技压同行">
+                    <li>
+                        注塑模具厂逆流而上，技压同行
+                    </li>
+                </a>
+            
+                <a href="/Mobile/MArticles/mjrrlsszwd_1_page1.html" title="模具人，人类史上最伟大的工匠集团">
+                    <li>
+                        模具人，人类史上最伟大的工匠集团
+                    </li>
+                </a>
+            
+                <a href="/Mobile/MArticles/mjcpzbgjgb_1_page1.html" title="模具厂品质部跟加工部门，为什么总是针锋相对？">
+                    <li>
+                        模具厂品质部跟加工部门，为什么总...
+                    </li>
+                </a>
+            
+                <a href="/Mobile/MArticles/mjzzgcdyxc_1_page1.html" title="模具制造工厂的隐形成本">
+                    <li>
+                        模具制造工厂的隐形成本
+                    </li>
+                </a>
+            
+                <a href="/Mobile/MArticles/smdjdyyyxt_1_page1.html" title="石墨电极的应用有效提高塑胶模具加工制造效率">
+                    <li>
+                        石墨电极的应用有效提高塑胶模具加...
+                    </li>
+                </a>
+            
+    </ul>
+</div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+        </section>
+        <!--底部 开始-->
+        
+<footer class="g-ft">
+		<a href="#logo"><div class="m-top">回到顶部</div></a>
+        <div class="f_nav">
+        	<a href="/Mobile/Mhelps/ContactUs.html" title="联系鸿凯运"><em class="f_i01">联系鸿凯运</em></a>
+            <a href="/Mobile/SiteMap.html" title="网站地图"><em class="f_i02">网站地图</em></a>
+        </div>
+        <span>深圳市鸿凯运科技有限公司　　版权所有信息</span>
+        <div class="f_code"><img src="/{DIY_PATH}mobile/images/common/f_code.jpg" alt="ewm"/></div>
+
+        <div class="social_nav5">
+        	<ul>
+                <li><a href="tel:4009600308"><i><img src="{DIY_PATH}mobile/images/common/f_pic1.png" alt="电话咨询"/></i>电话咨询</a></li>
+                <li><a onclick="doyoo.util.openChat('g=10037723');return false;"><i><img src="{DIY_PATH}mobile/images/common/f_pic2.png" alt="在线客服"/></i>在线客服</a></li>
+                <li><a href="javascript:void();"><i><img src="{DIY_PATH}mobile/images/common/f_pic3.png" alt="产品中心"/></i>产品中心</a>
+                <div class="erji">
+                    <a href="/jdwkm.html">机电外壳模具</a>
+                    <a href="/leddj.html">LED灯具模具</a>
+                 </div>
+                </li>
+                <li><a href="/Mobile/Mhelps/aboutus.html"><i><img src="{DIY_PATH}mobile/images/common/f_pic4.png" alt="关于鸿凯运"/></i>关于鸿凯运</a></li>
+            </ul>
+        </div>
+	</footer>
+<script type="text/javascript" charset="utf-8" src="http://lead.soperson.com/10030240/10056033.js"></script>
+        <!--底部 结束-->
+    </div>
+</body>
+<script type="text/javascript" src="{DIY_PATH}mobile/js/Jquery.js"></script>
+<script type="text/javascript" src="{DIY_PATH}mobile/js/nsw_mobile.js"></script>
+<script type="text/javascript" src="{DIY_PATH}mobile/js/Tools.js"></script>
+</html>
